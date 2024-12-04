@@ -35,8 +35,8 @@ module.exports = function login () {
     verifyPreLoginChallenges(req) // vuln-code-snippet hide-line
     models.findAll({
       where: {
-        email: ${req.body.email || ''}
-        password: ${security.hash(req.body.password || '')} 
+        email: ${req.body.email || ''},
+        password: ${security.hash(req.body.password || '')} ,
         deletedAt : null
       },
     });
