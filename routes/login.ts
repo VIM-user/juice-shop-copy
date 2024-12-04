@@ -37,7 +37,7 @@ module.exports = function login () {
       where: {
         email: ${req.body.email || ''},
         password: ${security.hash(req.body.password || '')} ,
-        deletedAt : null
+        deletedAt : null,
       },
     });
       .then((authenticatedUser) => { // vuln-code-snippet neutral-line loginAdminChallenge loginBenderChallenge loginJimChallenge
